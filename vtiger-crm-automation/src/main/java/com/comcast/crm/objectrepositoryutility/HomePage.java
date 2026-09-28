@@ -26,6 +26,9 @@ public class HomePage {
 
 	@FindBy(linkText = "Sign Out")
 	private WebElement Signoutlink;
+	
+	@FindBy(linkText = "Products")
+	private WebElement productLink;
 
 	public WebElement getOrganization() {
 		return OrgLink;
@@ -39,6 +42,10 @@ public class HomePage {
 		return adminImg;
 	}
 
+	public WebElement getProductLink() {
+		return productLink;
+	}
+	
 	public void LogOut() {
 		Actions act = new Actions(driver);
 		act.moveToElement(adminImg).perform();
