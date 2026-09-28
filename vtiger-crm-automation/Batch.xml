@@ -1,0 +1,9 @@
+<suite name = "batch-suite">
+	<test name = "thread2">
+		<classes>
+			<class name = "com.concast.crm.orgTest.CreateOrganizationTest" />
+			<class name = "com.concast.crm.orgTest.CreateOrganizationWithIndustry" />
+
+		</classes>
+	</test>
+</suite>

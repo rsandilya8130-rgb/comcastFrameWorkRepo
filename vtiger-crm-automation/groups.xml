@@ -1,0 +1,15 @@
+<suite name = "group-suite">
+	<test name = "thread1">
+		<groups>
+			<run>
+				<include name = "smoke" />
+			</run>
+		</groups>
+		
+		<classes>
+			<class name = "typeOfExecution.ContactTest" />
+			<class name = "typeOfExecution.LeadTest" />
+			<class name = "typeOfExecution.OrgTest" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [group-suite]">
+  <test thread-count="5" parallel="tests" name="thread1(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="typeOfExecution.OrgTest">
+        <methods>
+          <include name="createOrgTest"/>
+        </methods>
+      </class> <!-- typeOfExecution.OrgTest -->
+      <class name="typeOfExecution.ContactTest">
+        <methods>
+          <include name="createContactTest"/>
+        </methods>
+      </class> <!-- typeOfExecution.ContactTest -->
+      <class name="typeOfExecution.LeadTest">
+        <methods>
+          <include name="createLeadTest"/>
+        </methods>
+      </class> <!-- typeOfExecution.LeadTest -->
+    </classes>
+  </test> <!-- thread1(failed) -->
+</suite> <!-- Failed suite [group-suite] -->
