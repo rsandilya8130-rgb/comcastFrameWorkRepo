@@ -38,8 +38,9 @@ public class BaseClass {
 	@BeforeClass(groups = { "Smoke", "Regression" })
 	public void beforeClass() throws IOException {
 		System.out.println("===Launch The Browser===");
-		String Browser = fu.getDataFromPropertiesFile("bro");
+	//	String Browser = fu.getDataFromPropertiesFile("bro");
 
+		String Browser = System.getProperty("browser");
 		if (Browser.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (Browser.equals("edge")) {
@@ -56,10 +57,13 @@ public class BaseClass {
 	@BeforeMethod(groups = { "Smoke", "Regression" })
 	public void beforeMethod() throws IOException {
 		System.out.println("===Login===");
-		String Url = fu.getDataFromPropertiesFile("url");
+		//String Url = fu.getDataFromPropertiesFile("url");
+		String Url = System.getProperty("url");
 		LoginPage lp = new LoginPage(driver);
-		String UserName = fu.getDataFromPropertiesFile("un");
-		String Password = fu.getDataFromPropertiesFile("pwd");
+	//	String UserName = fu.getDataFromPropertiesFile("un");
+	//	String Password = fu.getDataFromPropertiesFile("pwd");
+		String UserName = System.getProperty("username");
+		String Password = System.getProperty("password");
 		lp.loginToapp(Url, UserName, Password);
 	}
 
